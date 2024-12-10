@@ -10,6 +10,29 @@ This repository stores mainnet addresses and object IDs for packages and objects
 | Nov 14, 2024  |DRAGON FOOD | 0x9a6a2041576d996414723481c68ea60e92754906f7770f78646870039eb387be     | [TxLink](https://suivision.xyz/txblock/Bf7SHm3bS6ehmLiFFSUm8pRNT9SJoVJXH2jfHRRqgwj)  | 2 |
 | Nov 24, 2024  |MEME LAUNCHPAD | 0x2b9b0ba3d4efca53a2cbe669cd95d3c169fa3d2e889d2806279c339f51610a86     | [TxLink](https://suivision.xyz/txblock/4VHPgFx9kNBE45YZVgSLoetqVJcjoPZsAXA7wsaTrPVy)  | 4 |
 
+#### Major Upgrade: Dec 10, 2024
+Major update to enable staking multiple dragon-bee eggs with the same LP position.
+
+Key Changes:
+1. Package Upgrades
+   - Dragon Trainer: Added queries
+     - `get_transfer_box_for_trainer`
+     - `get_bee_flight_info` 
+     - `get_bee_in_flight_info`
+   - Two Pool: Added `entry_burn_honey_from_supply` to honey_trade module
+   - Queen Maker: Updated for compatibility
+   - Three Pool: Updated for compatibility
+
+2. Dragon Food Package
+   - Deployed new version with multi-egg staking support
+   - Added deletion functions to deprecated package
+   - Migrated `DragonFood` and `PoolHive` objects
+
+3. Integration Updates
+   - Meme Launchpad: Added `MemeTransferred` event
+   - Scripts Package: Added `get_meme_launchpad_info` query
+
+Related PR: [#13](https://github.com/DegenHive/degenhive-fi/pull/13)
 
 ## Latest Package Addresses
 
@@ -18,13 +41,13 @@ This repository stores mainnet addresses and object IDs for packages and objects
 | Yield Flow        | 0x50c2216a078d3bdf5081fe436df9f42dfdbe538ebd9c935913ce2436362cff90    | Implements protocol configuration related logic |
 | AMM Math   | 0x6c442d664dffc25e3fda48f15370ffaecac1f94ecb6debb46cd41ac4b38bddfa    | Implenents Stableswap, weighted and curved AMM pools math |
 | DSUI Vault   | 0x53578180d93e5fa7b10334045c4565e3c743f0eb64c89932b14adb1b0baab145    | Implements SUI liquid staking via DSUI VAULT |
-| Dragon Trainer   | 0x84f8a4ed68568c4f30592d03dfcaf7bedcae27e3a1e84a1ba7dfd4886c511cbc    | Implements Dragon Trainer, dragon-bees and marketplace logic |
-| Two Token AMM   | 0x1609ad341cc5ef030d782ee7c2d84070d0768c6cede910e216c3ff1873a84bc1    | Implements Two Token AMM |
-| Three Token AMM   | 0xb0e95627dfee7e43bb8d119f6a63abd4cbbc8f8abc17d403844e47244bd91e67    | Implements Three Token AMM |
-| Dragon Food   | 0x9a6a2041576d996414723481c68ea60e92754906f7770f78646870039eb387be    | Implements LP token staking for rewards |
-| Queen Maker   | 0x83ba940faec75a014752518940e225d0f150b439068af0ef9e36fba1a20a372d    | Implements Queen Maker |
-| Scripts   | 0x950cafef35150568f2b7b9b5cb911656dc5b18ffa1b60fcb8263b2845b3dc0b9    | Implements helper router functions for our AMM pools |
-| Meme Launchpad   | 0x2b9b0ba3d4efca53a2cbe669cd95d3c169fa3d2e889d2806279c339f51610a86    | Implements Meme Launchpad |
+| Dragon Trainer   | 0x562e3ce57f9de721b6dd8b7dcc4a7f83e280c56a55deecb138eaa1c4351ddf20    | Implements Dragon Trainer, dragon-bees and marketplace logic |
+| Two Token AMM   | 0xecc13520503623d7c07763316fd99a5b380e9e6eae2c7ccddf8a31a88a0e81a4    | Implements Two Token AMM |
+| Three Token AMM   | 0x67579600c8c56757da4c34d95ca50afb0e9b910575a5027078d0e2da42ade2ad    | Implements Three Token AMM |
+| Dragon Food   | 0xa8ba57bdb1135d5afd931dbb59e3b7b57c6cc8a9321d525040b090373a99797b    | Implements LP token staking for rewards |
+| Queen Maker   | 0x1b94f5e96195217df14c23431222a5d831a0b6fa409935138dc50754b47f8c7d    | Implements Queen Maker |
+| Scripts   | 0xc32f8d3add29271b12bbe7016edaaab8cdd027690b08b2488254945ce13b6574    | Implements helper router functions for our AMM pools |
+| Meme Launchpad   | 0xc05908a2fee024d23c0f9eccc3bf6fa9687c19f2b35d45df7f7a1e52816ed983    | Implements Meme Launchpad |
 | Vesting   | 0xff2cfa3438beb90b23b6783f7c0dced77ba4f69bd2c084e70b6870aa260b4129    | Implements Vesting for early backers and team |
 
 
@@ -42,7 +65,7 @@ This repository stores mainnet addresses and object IDs for packages and objects
 | TRAINER_MAPPING_STORE     | 0xc37f21db36c0a5d675a6864f21f0935a83952ade00e46b84195be4434e9c402b   | [Link](https://suivision.xyz/object/0xc37f21db36c0a5d675a6864f21f0935a83952ade00e46b84195be4434e9c402b) | Stores dragon-trainers <> usernames and similar mappings for quicker access |
 | MARKETPLACE     | 0x8714e3aa8c2ae421420997a520b38a8bf66965acc9c130246437b14cd1bbb924   | [Link](https://suivision.xyz/object/0x8714e3aa8c2ae421420997a520b38a8bf66965acc9c130246437b14cd1bbb924) | Facilitates dragon-bees trading among users |
 | QUEEN MAKER     | 0xf8fe8b500c206044d1a46797ca268cf65154729d32255fcbaa149b3ddd4780f7   | [Link](https://suivision.xyz/object/0xf8fe8b500c206044d1a46797ca268cf65154729d32255fcbaa149b3ddd4780f7) | Implements auction logic for a dragon-bee to become a queen-bee |
-| DRAGON FOOD     | 0x8c4452801b68f4d22f5cec0f96562bc1ba7f93e28377f19ac9d0ec8814089dc3   | [Link](https://suivision.xyz/object/0x8c4452801b68f4d22f5cec0f96562bc1ba7f93e28377f19ac9d0ec8814089dc3) | Implements LP token staking for rewards |
+| DRAGON FOOD     | 0xb7ad2a70a040b9e31c41ac947f0d9b3ce40ac2cdb76511c76d553941d23eeec0   | [Link](https://suivision.xyz/txblock/QsmbToMAXj1Ringw2evuhwECwY93nFLGvaLGB65MBQm) | Implements LP token staking for rewards |
 | HONEY MANAGER     | 0x21fbea0ca478ca51a00766529ebcf5f0eded1d4a9fcbd81f7cba48fa5744674a   | [Link](https://suivision.xyz/object/0x21fbea0ca478ca51a00766529ebcf5f0eded1d4a9fcbd81f7cba48fa5744674a) | Required for txs involving HONEY token |
 | MEME LAUNCHPAD     | 0xd9c4a9a46e00dde933d31ebfb66f657c13e0efcb9cc99a60785289af11268559   | [Link](https://suivision.xyz/object/0xd9c4a9a46e00dde933d31ebfb66f657c13e0efcb9cc99a60785289af11268559) | Implements Meme Launchpad for launching new tokens on DegenHive |
 | VESTING VAULT     | 0x0ab64ecf6dfd9d92221f9655c03b551ae795a76a996583235faf6b12a9c20375   | [Link](https://suivision.xyz/object/0x0ab64ecf6dfd9d92221f9655c03b551ae795a76a996583235faf6b12a9c20375) | Implements vesting for early backers and team |

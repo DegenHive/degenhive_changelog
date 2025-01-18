@@ -4,6 +4,13 @@ This repository stores mainnet addresses and object IDs for packages and objects
 
 ## Package Upgrade History
 
+Major Upgrade: Jan 18, 2024
+1. DSUI VAULT, math, dragon-trainer, queen maker, two pool, three pool, dragon-food packages were upgraded
+   - Audit fixes from Zellic report
+   - Added referral logic and discount for dragonbee eggs minting
+   - Added helper query for swap simulations
+
+
 ### Core Package
 | Date | Package Name | Address | Transaction Hash | Version |
 |---------|---------|------------|-----------------|------|
